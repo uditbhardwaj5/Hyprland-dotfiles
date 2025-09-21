@@ -1,0 +1,76 @@
+{
+   
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "idle_inhibitor", "pulseaudio", "backlight", "battery", "custom/power"],
+
+    "hyprland/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },   
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {        
+        "icon-size": 15,
+        "spacing": 10
+    },
+    "clock": {
+         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+         "format-alt": "{:%Y-%m-%d}",
+	 "format": "{:%I:%M %p}",
+		"on-click": "gnome-calendar"
+    },
+    "pulseaudio": {
+        "format": "  {volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+	"custom/power": {
+		"format": " ",
+		"on-click": "wlogout"
+	},
+
+
+    "backlight": {
+  "device":  "amdgpu_bl0",
+  "format": "  ☀ {percent}%"
+},
+
+    /*"custom/scratchpad-indicator": {
+        "format-text": "{}hi",
+        "return-type": "json",
+        "interval": 3,
+        "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
+    },*/
+    "battery":{
+    "bat": "BAT1",
+    "format": "  {icon}  {capacity}%",
+    "format-charging": "⚡ {capacity}%",
+    "format-plugged": "⚡ {capacity}%",
+    "format-alt": "{time} left",
+    "tooltip": true,
+   // "tooltip-format": "🔋 Battery\nStatus: {status}\nCapacity: {capacity}%\nTime left: {time}",
+
+    "format-icons": ["", "", "", "", ""]
+    }    
+}
