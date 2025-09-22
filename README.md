@@ -2,9 +2,13 @@
 This is my hyprland rice dotfiles. Feel free to use them.
 
 You will find the config for-
+
 -> hyprland
+
 -> waybar
+
 -> hyprlock
+
 and others
 ## Note
 These dotfiels does not have config for zsh.
